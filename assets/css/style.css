@@ -1,0 +1,114 @@
+/* On enlève tous les margin et padding du body*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/* On enlève tous les bullets des listes */
+ul,ol{
+    list-style: none;
+}
+body{
+    /* On répète l'image sur l'axe "x" et non sur l'axe "y". On ajoute la couleur
+    du bas de l'image #bfbfbf en background pour unifier la couleur de la page */
+    background: #bfbfbf url('/assets/images/background.jpg') repeat-x; 
+    font-family: Arial, sans-serif;
+}
+header{
+    margin: 25px 0;  
+}
+header h1{
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Limelight', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000;
+
+}
+/* section main-menu */
+#main-menu ul{
+    width: 980px;
+    height: 500px;  
+    margin: 0 auto;
+    padding-top:  178px;
+}
+/* On utilise la propriété float left pour placer les éléments les uns à coté des autres */
+#main-menu ul li{
+    float: left;
+    width: 140px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    
+}
+/* On montre la partie de la photo noir et blanc correspondant à la première actrice  */
+.bw{
+    position: absolute;
+    left: 0px;
+    width: 140px;
+    height: 500px;
+    /* "pointer" permet d'avoir une main à la place de la flèche quand on passe sur l'image */
+    cursor: pointer;
+    background: url('/assets/images/bw-image.jpg');
+    opacity: 0.7;
+}
+/* On montre la partie de la photo couleur correspondant à la première actrice  */
+.color{
+    position: absolute;
+    left: 140px;
+    width: 140px;
+    height: 500px;
+    /* "pointer" permet d'avoir une main à la place de la flèche quand on passe sur l'image */
+    cursor: pointer;
+    background: url('/assets/images/color-image.jpg');   
+}
+/* On décale de 140px les div de la partie 2 vers la gauche, pour voir la 2eme actrice  */
+#part2 div{
+    background-position: -140px 0px; 
+}
+/* On décale de 280px les div de la partie 3 vers la gauche, pour voir la 3eme actrice  */
+#part3 div{
+    background-position: -280px 0px;
+}
+/* On décale de 420px les div de la partie 4 vers la gauche, pour voir la 4eme actrice  */
+#part4 div{
+    background-position: -420px 0px;
+}
+/* On décale de 560px les div de la partie 5 vers la gauche, pour voir la 5eme actrice  */
+#part5 div{
+    background-position: -560px 0px;
+}
+.description{
+    position: absolute;
+    left: 140px;
+    width: 250px;
+    height: 460px;
+    padding: 20px;
+    background: #fff;
+}
+.description h2{
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Limelight', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+}
+.description h3{
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 26px;
+    font-family: 'Lobster', sans-serif;
+    background: #df0000;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 5px;
+}
+.description p{
+    padding-top: 35px;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+}
